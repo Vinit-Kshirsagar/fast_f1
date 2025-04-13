@@ -1,7 +1,17 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-const Graph = ({ data }) => {
+const dummyData = [
+    { label: 'Lap 1', value: 120 },
+    { label: 'Lap 2', value: 130 },
+    { label: 'Lap 3', value: 125 },
+    { label: 'Lap 4', value: 135 },
+];
+
+const Graph = (props) => {
+    console.log("Data passed to Graph:", props?.data);  // Add this log to check the data
+    const data = props?.data || dummyData;
+
     const chartData = {
         labels: data.map(point => point.label),
         datasets: [

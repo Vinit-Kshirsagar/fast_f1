@@ -10,6 +10,7 @@ const Home = () => {
             <p>
                 Use the navigation to view detailed dashboards and insights.
             </p>
+            alert("Home Page Loaded"); // Add this line
         </div>
     );
 };
